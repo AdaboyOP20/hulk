@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hulk</title>
+</head>
+<body>
+    <h1 id="hulkk">My name is Bruce Banner</h1>
+    <label>Gamma Radiation</label>
+    <input type="range" min="400" max="600" value="400" id="ray"><br>
+    <img src="/Img/Bruce_Banner.webp" alt="bruce" style="width: 400px;" id="brucelee">
+    <script>
+        function infect()
+        {
+            brucelee.style.width = ray.value + "px";
+            if(ray.value >= 500)
+            {
+                brucelee.src = "/Img/Hulk.webp"
+                hulkk.textContent = "No, I'm HULK!"
+            }
+            else
+            {
+                brucelee.src = "/Img/Bruce_Banner.webp"
+                hulkk.textContent = "I'm Bruce Banner"
+            }
+        }
+        ray.onchange = infect;
+    </script>
+</body>
+</html>
